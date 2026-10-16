@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L’airpods | Boutique</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;color:#171717;background:#fff}
+header{background:#080808;color:white;text-align:center;padding:24px}
+header h1{font-size:32px;margin:0}
+header p{color:#ccc}
+.hero{text-align:center;padding:55px 20px;background:#f4f4f4}
+.hero h2{font-size:35px}
+.hero p{color:#555;font-size:18px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:25px;max-width:1000px;margin:auto}
+.card{text-align:center;border:1px solid #eee;border-radius:18px;padding:20px}
+.card img{width:100%;height:190px;object-fit:contain}
+.price{font-size:22px;font-weight:bold;margin:18px}
+button{background:#080808;color:white;border:0;padding:14px 23px;border-radius:30px;font-size:16px}
+.about{text-align:center;background:#f5f5f5;padding:30px}
+footer{background:#080808;color:white;text-align:center;padding:25px}
+</style>
+</head>
+<body>
+<header>
+<h1>L’airpods 🎧</h1>
+<p>Le son premium. Le style ultime.</p>
+</header>
+<section class="hero">
+<h2>Découvrez votre prochain son.</h2>
+<p>Des écouteurs sans fil pour accompagner chaque instant.</p>
+<button onclick="order('Bonjour L’airpods, je souhaite voir vos produits.')">Nous contacter</button>
+</section>
+<section class="products">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=500&q=80" alt="Écouteurs sans fil">
+<h3>AirPods Style</h3>
+<p>Un design élégant pour votre quotidien.</p>
+<div class="price">Prix sur demande</div>
+<button onclick="order('Bonjour, je suis intéressé par AirPods Style.')">Commander</button>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=500&q=80" alt="Écouteurs premium">
+<h3>AirPods Premium</h3>
+<p>Un son agréable et un style moderne.</p>
+<div class="price">Prix sur demande</div>
+<button onclick="order('Bonjour, je suis intéressé par AirPods Premium.')">Commander</button>
+</div>
+</section>
+<section class="about">
+<h2>Pourquoi L’airpods ?</h2>
+<p>Commande simple et service personnalisé.</p>
+<p>Contactez-nous pour les prix et la livraison.</p>
+</section>
+<footer>
+<p>© 2026 L’airpods</p>
+<p>Votre boutique d’écouteurs sans fil.</p>
+</footer>
+<script>
+function order(message){
+const phone="";
+if(!phone){
+alert("Contactez-nous pour connaître les prix et passer commande.");
+return;
+}
+window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(message),"_blank");
+}
+</script>
+</body>
+</html>
